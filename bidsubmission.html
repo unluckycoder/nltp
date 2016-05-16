@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+
+<script>
+function addTextBox(btn) {
+    var element = document.createElement("input");
+    element.setAttribute("type", "text");
+    element.setAttribute("value", "");
+    element.setAttribute("name", "Test Name");
+	element.setAttribute("placeholder", "Player Name");
+    btn.parentNode.insertBefore(element, btn)
+	
+	var element2 = document.createElement("input");
+    element2.setAttribute("type", "text");
+    element2.setAttribute("value", "");
+    element2.setAttribute("name", "Test Name");
+	element2.setAttribute("placeholder", "Bid Amount");
+    btn.parentNode.insertBefore(element2, btn)
+	
+	linebreak = document.createElement("br");
+	btn.parentNode.insertBefore(linebreak, btn);
+}
+
+</script>
+<body>
+
+
+
+<form name = "Bid Form">
+<b>Team Name:</b><br>
+  <input type="text" name="firstname">
+  <br>
+  <p></p>
+<b>Bids:</b>
+ <table>
+<tr>
+<td><input id="pname" type="text" name="playername" placeholder="Player Name" /></td>
+<td><input id="amount" type="text" name="bidamount" placeholder="Bid Amount" /></td>
+</tr>
+</table>
+ 
+<input type="button" id="btn" onclick="addTextBox(btn)" value="Add Bid">  <br><p></p>
+ <input type="submit" id="submitbtn" value="Submit Bids">   
+</form>
+
+</body>
+</html>
